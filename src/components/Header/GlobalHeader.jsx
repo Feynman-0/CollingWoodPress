@@ -14,15 +14,15 @@ import DashboardIcon from "../DashboardIcon";
 
 
 export default function GlobalHeader() {
-  const navigation = [
-    { name: "Ghostwriting", href: "/ghostwriting" },
-    { name: "Editing", href: "/editing" },
-    { name: "Publishing", href: "/publishing" },
-    { name: "Marketing", href: "/marketing" },
-    { name: "Audiobook", href: "/audiobook" },
-    { name: "About Us", href: "/about" },
-    { name: "Contact Us", href: "/contact" },
-  ];
+  let navigation = [
+    "Ghostwriting",
+    "Editing",
+    "Publishing",
+    "Marketing",
+    "Audiobook",
+    "About Us",
+    "Contact Us",
+  ]
 
   return (
     <section>
@@ -69,10 +69,8 @@ export default function GlobalHeader() {
                             <div className="mt-4">
                               <div className='border-2 border-black p-3.75 rounded-xl flex flex-col gap-2'>
                                 {
-                                  navigation.map((item, index) => (
-                                    <Link href={item.href} key={index} className='font-semibold text-black text-[16px] hover:text-primary hover:scale-105 transition-all duration-700'>
-                                      {item.name}
-                                    </Link>
+                                  navigation.map((keys, index) => (
+                                    <Link href="#" key={index} className='font-semibold text-black text-[16px] hover:text-primary hover:scale-105 transition-all duration-700'>{keys} </Link>
                                   ))
                                 }
                               </div>
